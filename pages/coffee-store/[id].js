@@ -151,6 +151,7 @@ const CoffeeStore = (initialProps) => {
     <div className={styles.layout}>
       <Head>
         <title>{name}</title>
+        <meta name="description" content={`${name} coffee store`} />
       </Head>
       <div className={styles.container}>
         <div className={styles.col1}>
@@ -180,7 +181,7 @@ const CoffeeStore = (initialProps) => {
               src="/static/icons/places.svg"
               width="24"
               height="24"
-              alt=""
+              alt="places icon"
             />
             <p className={styles.text}>{address}</p>
           </div>
@@ -196,7 +197,12 @@ const CoffeeStore = (initialProps) => {
             </div>
           )}
           <div className={styles.iconWrapper}>
-            <Image src="/static/icons/star.svg" width="24" height="24" alt="" />
+            <Image
+              src="/static/icons/star.svg"
+              width="24"
+              height="24"
+              alt="star icon"
+            />
             <p className={styles.text}>{votingCount}</p>
           </div>
           <button className={styles.upvoteButton} onClick={handleUpvoteButton}>
